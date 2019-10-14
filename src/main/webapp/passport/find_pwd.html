@@ -1,0 +1,176 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>找回密码</title>
+    <link href="../css/find_paswd.css" rel="stylesheet"
+          type="text/css">
+    <script src="../js/find_paswd.js"
+            type="text/javascript"></script>
+    <link rel="shortcut icon" href="../img/yhd_favicon.ico">
+    <script charset="UTF-8" async=""
+            src="../js/slide.min.js"></script>
+    <link href="../css/slide.min.css" rel="stylesheet"
+          type="text/css">
+</head>
+
+<body>
+<link rel="shortcut icon" href="../img/yhd_favicon.ico">
+<div class="regist_header clearfix">
+    <div class="wrap">
+        <a href="http://www.yhd.com" class="logo"><img
+                src="../img/loginlogo.jpg" height="55"
+                alt="1号店"></a>
+        <div class="regist_header_right clearfix">
+            <!--<a href="#" class="english_edition" id="edition" style="display:none">English</a>-->
+            <!-- <div class="help_wrap">
+                <a class="hd_menu" href="http://cms.yhd.com/cms/view.do?topicId=12"><s class="help_ico"></s>帮助中心</a>
+                <div class="hd_menu_list">
+                    <ul>
+                        <li><a href="http://home.yhd.com/order/toOrderList.do">包裹跟踪</a></li>
+                        <li><a href="http://cms.yhd.com/cms/view.do?topicId=12">常见问题</a></li>
+                        <li><a href="http://rma.yhd.com/return/returnApplyList.do">在线退换货</a></li>
+                        <li><a href="http://cms.yhd.com/cms/view.do?topicId=43">在线投诉</a></li>
+                    </ul>
+                </div>
+            </div> -->
+            <span class="fr">您好，欢迎光临1号店！ <a href=" class=" blue_link">请登录</a></span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var no3wUrl = "yhd.com";
+    var currSiteId = 1;
+    var URLPrefix = {
+        "yhd_domain": ".yhd.com",
+        "global_statics": "https://passport.yhd.com/front-passport",
+        "sam_passport_statics": "https://security.samsclub.cn/front-passport/passport",
+        "chinese": "1号店",
+        "passportother": "https://passport.1mall.com",
+        "sam_domain": ".samsclub.cn",
+        "sam_captcha_js_url": "https://security.samsclub.cn/captcha/js/api.js",
+        "helpUrl": "http://www.yihaodian.com/cms/view.do?topicId=9864",
+        "hk_passport_statics": "https://passport.yihaodian.com.hk/front-passport/passport",
+        "yhd_captcha_host": "https://captcha.yhd.com",
+        "tracker": "tracker.yhd.com",
+        "sam_login_url": "https://security.samsclub.cn/customer/login_input.do",
+        "sam_passport_host": "https://security.samsclub.cn",
+        "central": "http://www.yhd.com",
+        "out3wurl": "www.yihaodian.com",
+        "yhd_passport_host": "https://passport.yhd.com",
+        "sam_request_namespace": "/customer",
+        "mySite": "http://my.yihaodian.com/member/my.do",
+        "passport_statics": "https://passport.yhd.com/front-passport/passport",
+        "yaowang": "http://www.111.com.cn",
+        "sam_captcha_host": "https://security.samsclub.cn",
+        "my": "http://my.yhd.com",
+        "httpurl": "http://www.yhd.com",
+        "mymall": "http://my.1mall.com",
+        "yhd_login_url": "https://passport.yhd.com/passport/login_input.do",
+        "agreementUrl": "http://cms.yhd.com/cms/view.do?topicId=10",
+        "no3wUrl": "yhd.com",
+        "h5AgreementUrl": "http://cms.yhd.com/cms/view.do?topicId=54",
+        "yiwangauth": "http://mall.yiwang.cn",
+        "webStaticResourceUrl": "http://image.yihaodianimg.com",
+        "passport": "https://passport.yhd.com",
+        "shapeClientUrl": "https://passport.yhd.com/front-passport/passport/js/framework/common_yhd.js",
+        "validCodeShowUrl": "https://captcha.yhd.com/public/validcode.do",
+        "mall": "http://www.1mall.com"
+    };
+    var yhdUrl = "http://www.yhd.com";
+    var yhdPassportUrl = "https://passport.yhd.com";
+    var loli = window['loli'] || {};
+    var valid_code_service_flag = "1";
+</script>
+<script type="text/javascript"
+        src="../js/jquery.cookie.js"></script>
+
+
+<input type="hidden" value="0" id="iscompletepassword">
+<div class="find_wrap">
+    <div class="find_step">
+        <ul class="clearfix">
+            <!--完成给li加done,当前状态加cur -->
+            <li class="cur">
+                <em>1</em>
+                <p>填写用户名</p>
+                <i></i>
+            </li>
+            <li>
+                <em>2</em>
+                <p>验证身份</p>
+                <i></i>
+            </li>
+            <li>
+                <em>3</em>
+                <p>设置新密码</p>
+                <i></i>
+            </li>
+            <li>
+                <em>4</em>
+                <p>完成</p>
+            </li>
+        </ul>
+    </div>
+    <div class="find_detail">
+        <div class="y_regist_form">
+            <ul class="clearfix">
+                <input id="validateSig" type="hidden" value="TnLvWJvuDQo0FQrlLEDQljhnWhFoOqumSXv4QgsdeWd80snG">
+                <!--判断正确给li加class  “ipt_right”,错误给li加class  “ipt_wrong” -->
+                <li>
+                    <div class="y_same_item">
+                        <input class="ysame_input" type="text" _input="" value="" id="login_account">
+                        <span class="y_same_label">用户名</span>
+                    </div>
+                    <!--提示信息begin -->
+                    <i class="item_icon_sure"></i>
+                    <div class="y_regist_tips y_regist_tips_black" style="top: 6px;">
+                        <div class="y_regtip_rel">
+                            <i></i>
+                            <div class="y_tips_words">
+                                请输入手机号/邮箱/用户名
+                            </div>
+                        </div>
+                    </div>
+                    <!--提示信息end -->
+                </li>
+
+                <li>
+                    <a href="#" class="y_agreement_btn" _submit="" id="confirmUser">下一步</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="simplefooter"><a href="http://www.miibeian.gov.cn/"
+                          target="_blank">沪ICP备16050468号</a>|<a>沪B2-20170039</a>|<a
+        href="../img/ChEi11kJnKaAJQMrAAK-LnhML4o60600.jpg"
+        data-ref="YHD_Footer_Licence" target="_blank">营业执照</a>
+    <p>Copyright © 1号店网上超市 2007-2018，All Rights Reserved</p>
+</div>
+
+<script type="text/javascript">
+    var s_enum = {
+        'p': '0',//progress
+        's': '1',//success
+        'f': '2'//fail
+    };
+    window.jab_st = s_enum.p;
+</script>
+<script type="text/javascript" src="../js/main.min.js"></script>
+<script type="text/javascript">
+    window.jab = new JAB({
+        bizId: 'PASSPORT_FINDPWD',
+        initCaptcha: true
+    });
+    window.jab_st = s_enum.s;
+</script>
+<script>
+    jFindPw.init();
+</script>
+
+</body>
+
+</html>
