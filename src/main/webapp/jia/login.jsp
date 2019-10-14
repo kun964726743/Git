@@ -36,6 +36,7 @@
                 <div class="more">更多合作网站账号登录</div>
                 <div>git branch --set-upstream-to=origin/master master
                     <button class="login-qq"></button>
+
                     <button class="login-weixin"></button>
                 </div>
             </div>
